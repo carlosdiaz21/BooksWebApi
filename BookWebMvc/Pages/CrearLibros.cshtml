@@ -1,0 +1,44 @@
+﻿@page
+@model BookWebMvc.Models.Book
+@{
+    ViewData["Title"] = "Crear libro";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Crear nuevo</h3>
+        </div>
+        <div class="row">
+            <div class="col=sm-10">
+                <form method="post" asp-action="CrearLibro">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <label asp-for="Title" class="custom-control-label"></label>
+                    <input asp-for="Title" class="form-control" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                    <div class="form-group">
+                        <label asp-for="Description" class="custom-control-label"></label>
+                        <input asp-for="Description" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PageCount" class="custom-control-label"></label>
+                        <input asp-for="PageCount" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Excerpt" class="custom-control-label"></label>
+                        <input asp-for="Excerpt" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PublishDate" class="custom-control-label"></label>
+                        <input asp-for="PublishDate" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Crear" class="btn btn-primary"/>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
